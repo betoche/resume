@@ -1,0 +1,104 @@
+.resume {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.resume-header > .col-10 {
+    border-bottom: gray solid 1px;
+    text-align: right;
+    margin: 20px;
+    padding-bottom: 10px;
+}
+.resume-header h3 {
+    font-size: large;
+    color: gray;
+}
+.personal-info {
+    margin-top: 50px;
+}
+.profile-picture {
+    display:table-cell;
+    vertical-align: middle;
+    width:150px;
+    height:150px;
+}
+.profile-picture > span{
+    font-size:100px;
+}
+.objective {
+    border-left: gray solid 1px;
+    padding-left:20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.objective > h4 {
+    text-decoration: underline;
+}
+.resume-body {
+    margin-top: 50px;
+}
+.skills {
+
+}
+.skills > h3 {
+    text-decoration: underline;
+}
+.skills > .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+.skills > .container > span {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #ededed;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.job-experience {
+    /*border-left: gray solid 1px;*/
+    padding-left: 20px;
+}
+.job-experience > h3 {
+    text-decoration: underline;
+}
+.f-8 {
+    font-size: 8px;
+}
+.f-10 {
+    font-size: 10px;
+}
+.f-12 {
+    font-size: 12px;
+}
+.f-14 {
+    font-size: 14px;
+}
+.f-16 {
+    font-size: 16px;
+}
+.f-18 {
+    font-size: 18px;
+}
+
+.resume-footer {
+    margin-top: 50px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+
+.technologies > span {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #ededed;
+    border-radius: 10px;
+    display: inline-block;
+}
