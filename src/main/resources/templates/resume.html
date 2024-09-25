@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Alberto Larios Sanchez</title>
+    <!--
+    <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href = "@{/css/resume.css}" rel="stylesheet">
+    -->
+    <link href = "../static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href = "../static/css/resume.css" rel="stylesheet">
+    <link href = "../static/css/timeline.css" rel="stylesheet">
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container resume">
+        <div class="row resume-header">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <h1>Ing. Alberto José Larios Sánchez</h1>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row personal-info">
+            <div class="col-1"></div>
+            <div class="col-1 profile-picture">
+                <span class="material-symbols-outlined">person</span>
+            </div>
+            <div class="col-9 personal-info-details">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-1">
+                                <span class="material-symbols-outlined">home</span>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                Managua, Nicaragua
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <span class="material-symbols-outlined">phone</span>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                +505 8484 3705
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                betoche_1@hotmail.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 objective">
+                        <h4>Objective</h4>
+                        <p>
+                            En base a los mas de 16 años en desarrollo de sistemas, ayudar a garantizar el buen
+                            funcionamiento de los sistemas informaticos mediante la implementación de buenas
+                            practicas en el desarrollo y soporte de sistemas de información lo cual se traduce en ayudar a
+                            brindar agilidad y confiabilidad en la información mediante la buena administración, análisis
+                            y desarrollo de sistemas de información, que permita realizar toma de decisiones de manera
+                            ágil e inteligente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row" style="margin-top:50px; margin-bottom:50px;">
+            <div class="col-5"></div>
+            <div class="col-2" style="border-bottom: gray solid 1px;"></div>
+            <div class="col-5"></div>
+        </div>
+        <div class="row resume-body">
+            <div class="col-4">
+                <div class="row skills">
+                    <h3>Skills</h3>
+                    <div class="container">
+                        <span class="f-12">Spring boot</span><span class="f-8">Java</span><span class="f-10">Apache Kafka</span>
+                        <span class="f-8">Spring boot</span><span class="f-16">Java</span><span class="f-14">Apache Kafka</span>
+                        <span class="f-18">Spring boot</span><span class="f-10">Java</span><span class="f-16">Apache Kafka</span>
+                        <span class="f-12">Spring boot</span><span class="f-8">Java</span><span class="f-10">Apache Kafka</span>
+                        <span class="f-8">Spring boot</span><span class="f-16">Java</span><span class="f-14">Apache Kafka</span>
+                        <span class="f-18">Spring boot</span><span class="f-10">Java</span><span class="f-16">Apache Kafka</span>
+                        <span class="f-12">Spring boot</span><span class="f-8">Java</span><span class="f-10">Apache Kafka</span>
+                        <span class="f-8">Spring boot</span><span class="f-16">Java</span><span class="f-14">Apache Kafka</span>
+                        <span class="f-18">Spring boot</span><span class="f-10">Java</span><span class="f-16">Apache Kafka</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row job-experience">
+                    <h3>Job Experience</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-9">
+                                            <!--
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Timeline</h6>
+                                                    -->
+                                                    <div id="content">
+                                                        <ul class="timeline">
+                                                            <li class="event" data-date="Feb 2021 - Mar 2022">
+                                                                <h3>Registration</h3>
+                                                                <p>Get here on time, it's first come first serve. Be late, get turned away.</p>
+                                                            </li>
+                                                            <li class="event" data-date="2:30 - 4:00pm">
+                                                                <h3>Opening Ceremony</h3>
+                                                                <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP &amp; Busta Rhymes as an opening show.</p>
+                                                            </li>
+                                                            <li class="event" data-date="5:00 - 8:00pm">
+                                                                <h3>Main Event</h3>
+                                                                <p>This is where it all goes down. You will compete head to head with your friends and rivals. Get ready!</p>
+                                                            </li>
+                                                            <li class="event" data-date="8:30 - 9:30pm">
+                                                                <h3>Closing Ceremony</h3>
+                                                                <p>See how is the victor and who are the losers. The big stage is where the winners bask in their own glory.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            <!--
+                                                </div>
+                                            </div>
+                                            -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row resume-footer">
+            <div class="col-6">
+                <span style="font-weight:bold;">Powered by myself</span>: <a target="_blank" href="mailto:betoche_1@hotmail.com?subject=Your resumé caught my attention!&body=Dear Alberto," class="link-secondary">Alberto J. Larios Sánchez</a>
+            </div>
+            <div class="col-3">
+                <span style="font-weight:bold;">Used Techs:</span>
+                <div class="technologies">
+                    <span class="f-12">Spring boot</span>
+                    <span class="f-12">Java</span>
+                    <span class="f-12">Thymeleaf</span>
+                    <span class="f-12">HTML</span>
+                    <span class="f-12">CSS</span>
+                    <span class="f-12">h2 database</span>
+                    <span class="f-12">Javascript</span>
+                    <span class="f-12">JQuery</span>
+                </div>
+            </div>
+            <div class="col-3" style="text-align: right;">
+                <a href="https://graffos.net" target="_blank" class="link-secondary">Graffos ltd. (soon)</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
