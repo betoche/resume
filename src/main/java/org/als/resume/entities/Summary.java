@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Builder;
+import org.als.resume.enums.LanguageEnum;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 import org.springframework.data.annotation.CreatedDate;
@@ -15,11 +16,11 @@ import java.time.Instant;
 @Entity
 @Builder
 public record Summary(@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) Long id, String summaryContent,
-                      String htmlVersion, @JdbcTypeCode(SqlTypes.BIGINT) Users userSummary, Language language,
+                      String htmlVersion, @JdbcTypeCode(SqlTypes.BIGINT) Users userSummary, LanguageEnum language,
                       @JdbcTypeCode(SqlTypes.BIGINT) CssStyle style, @CreatedDate Instant creationDate,
                       @LastModifiedDate Instant lastModifiedDate, Boolean isTest, Boolean deleted) {
 
-    public Summary(String summaryContent, String htmlVersion, Users user, Language language, CssStyle style) {
+    public Summary(String summaryContent, String htmlVersion, Users user, LanguageEnum language, CssStyle style) {
         this(null, summaryContent, htmlVersion, user, language, style, null, null,
                 false, false);
     }
@@ -32,7 +33,7 @@ public record Summary(@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) Lo
         return Summary.builder()
                 .summaryContent(summary)
                 .htmlVersion(summary)
-                .language(Language.ENGLISH)
+                .language(LanguageEnum.ENGLISH)
                 .build();
     }
 }

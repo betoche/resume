@@ -1,9 +1,9 @@
-package org.als.resume.entities;
+package org.als.resume.enums;
 
 import lombok.Getter;
 
 @Getter
-public enum Language {
+public enum LanguageEnum {
     ENGLISH(1, "English", "English", "en"),
     SPANISH( 2, "Spanish", "Español", "es"),
     FRENCH( 3, "French", "Français", "fr");
@@ -13,7 +13,7 @@ public enum Language {
     private final String nameInItsIdiom;
     private final String abbreviation;
 
-    Language( Integer id, String name, String nameInItsIdiom, String abbreviation ) {
+    LanguageEnum(Integer id, String name, String nameInItsIdiom, String abbreviation ) {
         this.id = id;
         this.name = name;
         this.nameInItsIdiom = nameInItsIdiom;

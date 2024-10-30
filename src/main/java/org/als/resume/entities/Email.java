@@ -17,7 +17,7 @@ import java.time.Instant;
 public record Email(@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) Long id,
                     @JdbcTypeCode(SqlTypes.BIGINT) Users userSummary, String emailAddress,
                     @CreatedDate Instant createdDate, @LastModifiedDate Instant modifiedDate, Boolean isTest,
-                    Boolean deleted) {
+                    Boolean deleted) implements IdText {
 
     public Email( Users user, String emailAddress ) {
         this(null, user, emailAddress, null, null, false, false);
@@ -29,5 +29,9 @@ public record Email(@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) Long
                 .deleted(false)
                 .emailAddress("larios.alberto@gmail.com")
                 .build();
+    }
+
+    public String getTextRepresentation(){
+        return emailAddress;
     }
 }

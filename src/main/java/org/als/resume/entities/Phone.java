@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Builder;
+import org.als.resume.enums.CountryEnum;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 import org.springframework.data.annotation.CreatedDate;
@@ -15,13 +16,13 @@ import java.time.Instant;
 @Entity
 @Builder
 public record Phone(@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) Long id,
-                    @JdbcTypeCode(SqlTypes.BIGINT) Users userSummary, Country country, String phoneNumber,
+                    @JdbcTypeCode(SqlTypes.BIGINT) Users userSummary, CountryEnum country, String phoneNumber,
                     @CreatedDate Instant createdDate, @LastModifiedDate Instant lastModifiedDate, Boolean isTest,
                     Boolean deleted) {
 
     private static final String TEST_NUMBER = "84843705";
 
-    public Phone(Users user, Country country, String phoneNumber) {
+    public Phone(Users user, CountryEnum country, String phoneNumber) {
         this(null, user, country, phoneNumber, null, null, false, false);
     }
 
@@ -29,7 +30,7 @@ public record Phone(@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) Long
         return Phone.builder()
                 .isTest(true)
                 .deleted(false)
-                .country(Country.UNITED_STATES)
+                .country(CountryEnum.UNITED_STATES)
                 .phoneNumber(TEST_NUMBER)
                 .isTest(true)
                 .deleted(false)

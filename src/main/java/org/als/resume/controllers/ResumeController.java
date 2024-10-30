@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Objects;
 
 @Controller
-@RequestMapping(value = "/als")
+@RequestMapping(value = "/resume")
 public class ResumeController {
     @Autowired
     private UserService service;
@@ -34,7 +36,7 @@ public class ResumeController {
         return mv;
     }
 
-    @GetMapping("template/{templateId}/{languageId}")
+    @GetMapping("/template/{templateId}/{languageId}")
     @Cacheable( value = ResumeDBCacheConfig.CACHE_NAME)
     public ModelAndView getResumeTemplate( @PathVariable("templateId") Integer templateId, @PathVariable("languageId") Integer languageId ) {
         Users testUser = Users.getTestUser();

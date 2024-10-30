@@ -5,12 +5,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Builder;
+import org.als.resume.enums.HonorificPersonTitleEnum;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
 @Entity
 @Builder
-public record Users( @Id @GeneratedValue(strategy = GenerationType.SEQUENCE) Long id, String firstName,
+public record Users( @Id @GeneratedValue(strategy = GenerationType.SEQUENCE) Long id, HonorificPersonTitleEnum title, String firstName,
                      String secondName, String lastName, String secondLastName,
                      @JdbcTypeCode(SqlTypes.BIGINT) Phone phone, @JdbcTypeCode(SqlTypes.BIGINT) Email email,
                      @JdbcTypeCode(SqlTypes.BIGINT) Address address, @JdbcTypeCode(SqlTypes.BIGINT) Summary summary,
@@ -18,6 +19,7 @@ public record Users( @Id @GeneratedValue(strategy = GenerationType.SEQUENCE) Lon
 
     public static Users getTestUser() {
         return Users.builder()
+                .title(HonorificPersonTitleEnum.ING)
                 .firstName("Alberto")
                 .secondName("José")
                 .lastName("Larios")
